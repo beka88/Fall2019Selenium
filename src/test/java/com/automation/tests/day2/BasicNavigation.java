@@ -24,12 +24,25 @@ public class BasicNavigation {
         }
 
         driver.navigate().to("http://amazon.com");
+        Thread.sleep(3000);
 
         if(driver.getTitle().toLowerCase().contains("amazon")) {
             System.out.println("TEST Passed");
         }else{
             System.out.println("TEST FAILED");
         }
+
+        driver.navigate().back();
+        Thread.sleep(3000);
+
+        verifyEquals(driver.getTitle(),"Google");
+
+        driver.navigate().forward();
+        Thread.sleep(3000);
+        System.out.println("Title: "+ driver.getTitle());
+        System.out.println("URL: "+driver.getCurrentUrl());
+        driver.navigate().refresh();
+        Thread.sleep(3000);
 
         driver.close();
     }
