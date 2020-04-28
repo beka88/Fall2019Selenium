@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FindElementPractice {
     public static void main(String[] args) throws Exception {
 
-        WebDriver driver = DriverFactory.createADriver("chrome");
+        WebDriver driver = DriverFactory.createDriver("chrome");
         driver.get("http://practice.cybertekschool.com/sign_up");
         WebElement fullName = driver.findElement(By.name("full_name"));
         fullName.sendKeys("Mister Twister");

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Homework">
+
+    <test name="Homework test">
+        <parameter name="reportName" value="homework"/>
+        <classes>
+            <class name="com.automation.homework_5.Homework_5"/>
+        </classes>
+    </test>
+</suite>
